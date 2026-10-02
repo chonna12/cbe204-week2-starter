@@ -5,47 +5,70 @@ body {
     background: #f4f6f8;
 }
 
-.courses {
+/*.courses {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-}
+} */
 
-/* .courses {
+.courses {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 15px;
-} */
+} 
 
+/* ตกแต่งกรอบของการ์ด */
+/* ตกแต่งตัวการ์ดธีมทะเล */
 .course-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 220px;
-    padding: 20px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease;
+  /* ไล่สีจากขาวไปฟ้าอ่อน เหมือนชายหาดหรือผิวน้ำ */
+  background: linear-gradient(180deg, #ffffff 0%, #e1f5fe 100%);
+  border: 1px solid #b3e5fc;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  max-width: 300px;
+  /* เพิ่มเงาสีฟ้าอ่อนๆ ให้การ์ดดูมีมิติ */
+  box-shadow: 0 4px 12px rgba(2, 136, 209, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* เอฟเฟกต์เวลาเอาเมาส์ชี้ ให้การ์ดลอยขึ้นนิดๆ เหมือนคลื่นน้ำ */
 .course-card:hover {
-    transform: translateY(-4px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(2, 136, 209, 0.3);
 }
 
+/* ตกแต่งหัวข้อ สีน้ำเงินเข้ม (น้ำลึก) */
 .course-card h2 {
-    margin-top: 0;
-    color: #1e3a8a;
+  margin: 0 0 10px 0;
+  font-size: 22px;
+  color: #01579b; 
 }
 
+/* ตกแต่งข้อความอธิบาย สีฟ้าเข้ม */
 .course-card p {
-    color: #4b5563;
+  margin: 0 0 20px 0;
+  font-size: 15px;
+  color: #0277bd;
+  line-height: 1.5;
 }
 
+/* ตกแต่งปุ่มลิงก์ */
 .course-card a {
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: bold;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0288d1; /* สีฟ้าน้ำทะเล */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 25px; /* มุมโค้งมนเหมือนหยดน้ำ */
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(2, 136, 209, 0.4);
+  transition: background-color 0.3s;
+}
+
+/* ตอนเอาเมาส์ชี้ปุ่ม เปลี่ยนเป็นสีฟ้าที่สว่างขึ้น */
+.course-card a:hover {
+  background-color: #03a9f4; 
 }
